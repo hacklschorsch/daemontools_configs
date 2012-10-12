@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo Starting NodeJS
+exec 2>&1
+exec envdir ./env node ../../bundle/main.js
+
