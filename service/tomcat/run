@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export HOME=/home/project
+export CATALINA_OPTS="-Dsolr.solr.home=$HOME/application/solr/target/classes/"
+
+echo Starting Tomcat
+exec 2>&1
+exec $HOME/apps/opt/apache-tomcat/bin/catalina.sh run
+
