@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo Starting the Celery worker server
+exec 2>&1
+source ../tools/python_virtualenv/bin/activate
+cd ../../application/django
+exec python manage.py celery worker --loglevel=info
+
